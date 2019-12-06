@@ -44,7 +44,7 @@ You need to import first the widget in your html file.
         paths: { dist: location.pathname.replace(/\/[^/]+$/, "") + "/dist" }
     };
 </script>
-<script src="https://js.arcgis.com/4.3/"></script>
+<script src="https://js.arcgis.com/4.13/"></script>
 ```
 
 Then you can use it in your js files. Don't forget the css !
