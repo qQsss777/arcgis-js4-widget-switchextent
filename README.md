@@ -2,7 +2,7 @@
 
 This is a widget for ArcGIS API for Javascript 4. It allows you go back to your previous extent during your map navigation. It work only for 2D map for the moment.
 
-![](saves.gif)
+![](switchextent.gif)
 
 This widget exist for the ArcGIS API for JavaScript 3.x : https://developers.arcgis.com/javascript/3/jsapi/navigation-amd.html
 
