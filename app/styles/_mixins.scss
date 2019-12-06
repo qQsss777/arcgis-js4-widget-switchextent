@@ -1,0 +1,19 @@
+@mixin switchextent() {
+  .esri-switchextent {
+    display: flex;
+    align-items: center;
+    .esri-widget--button {
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      transition: background-color 125ms ease-in-out;
+    }
+  }
+}
+
+@if $include_SwitchExtent == true {
+  @include switchextent();
+}
