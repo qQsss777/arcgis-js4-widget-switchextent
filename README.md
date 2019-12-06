@@ -1,6 +1,6 @@
 # Widget SwitchExtent for ArcGIS API for JavaScript
 
-This is a widget for ArcGIS API for Javascript 4. It allows you go back to your previous extent during your map navigation. It work only for 2D map for the moment.
+This is a widget for ArcGIS API for Javascript 4. It allows you go back to your previous extent during your map navigation. It works **only for 2D map** for the moment.
 
 ![](switchextent.gif)
 
