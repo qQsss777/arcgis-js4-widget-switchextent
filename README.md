@@ -4,7 +4,7 @@ This is a widget for ArcGIS API for Javascript 4. It allows you go back to your 
 
 ![](switchextent.gif)
 
-This widget exist for the ArcGIS API for JavaScript 3.x : https://developers.arcgis.com/javascript/3/jsapi/navigation-amd.html
+This widget exists for the ArcGIS API for JavaScript 3.x : https://developers.arcgis.com/javascript/3/jsapi/navigation-amd.html
 
 ## Installation
 
