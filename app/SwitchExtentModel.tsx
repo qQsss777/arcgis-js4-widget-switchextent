@@ -81,7 +81,7 @@ class SwitchExtentModel extends declared(Accessor) {
     private _deactivateExtentWatching = () => this.stationaryWatching.remove()
     private _deactivateDragWatching = () => this.dragWatching.remove()
     //activate watching view
-    handleMoveView = () => {
+    handleMoveView = (): void => {
         //initialize array
         this.arrayPreviousExtents = []
         this.arrayNextExtents = []
@@ -99,7 +99,7 @@ class SwitchExtentModel extends declared(Accessor) {
     //--------------------------------------------------------------------
 
     //handle click and set previous extent is array length > 0
-    onPreviousClick = () => {
+    onPreviousClick = (): void => {
         //push current view to the next array
         this.arrayNextExtents.push(this.view.extent)
         //reinitialize previous extent properties
@@ -109,7 +109,7 @@ class SwitchExtentModel extends declared(Accessor) {
 
 
     //handle click and set previous extent is array length > 0
-    onNextClick = () => {
+    onNextClick = (): void => {
         this._activateDragHandler()
         //reinitialize previous extent properties
         this.view.extent = this.arrayNextExtents[this.arrayNextExtents.length - 1]
@@ -132,14 +132,13 @@ class SwitchExtentModel extends declared(Accessor) {
         event.action === 'end' ? this._emptyNextArray() : null
     }
 
-    private _emptyNextArray = () => {
+    private _emptyNextArray = (): void => {
         this.arrayNextExtents = []
-        this.isPreviousDisabled = true
         this._deactivateDragWatching()
     }
 
     //goal : pushing new extent in array
-    private _noChange = () => {
+    private _noChange = (): void => {
         // stringify current extent & last entry in arrat view
         this.currentExtentString = JSON.stringify(this.view.extent)
         this.lastArrayExtentString = JSON.stringify(this.arrayPreviousExtents[this.arrayPreviousExtents.length - 1])
@@ -155,7 +154,7 @@ class SwitchExtentModel extends declared(Accessor) {
         this._activateButton()
     }
 
-    private _pushExtent = () => {
+    private _pushExtent = (): void => {
         //check the limit of the array defined by users
         this.arrayPreviousExtents.length === this.count ? this.arrayPreviousExtents.splice(0, 1) : null
         //push the extent in the array
@@ -164,7 +163,7 @@ class SwitchExtentModel extends declared(Accessor) {
         this.lastArrayExtentString = JSON.stringify(this.arrayPreviousExtents[this.arrayPreviousExtents.length - 1])
     }
 
-    private _setExtent = () => {
+    private _setExtent = (): void => {
         //if last extent in the array is egal to the current extent and array length > 1, remove this value
         this.lastArrayExtentString === this.currentExtentString && this.arrayPreviousExtents.length > 1 ? this.arrayPreviousExtents.splice(this.arrayPreviousExtents.length - 1) : null
         this.view.extent = this.arrayPreviousExtents[this.arrayPreviousExtents.length - 1]
@@ -172,9 +171,9 @@ class SwitchExtentModel extends declared(Accessor) {
         this.arrayPreviousExtents.length > 1 ? this.arrayPreviousExtents.splice(this.arrayPreviousExtents.length - 1) : this.isPreviousDisabled = true;
     }
 
-    private _activateButton = () => {
+    private _activateButton = (): void => {
         this.arrayNextExtents.length === 0 ? this.isNextDisabled = true : this.isNextDisabled = false
-        this.arrayPreviousExtents.length <= 1 ? this.isPreviousDisabled = true : this.isPreviousDisabled = false
+        this.currentExtentString === JSON.stringify(this.arrayPreviousExtents[0]) ? this.isPreviousDisabled = true : this.isPreviousDisabled = false
     }
 }
 
