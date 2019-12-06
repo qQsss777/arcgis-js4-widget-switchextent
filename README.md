@@ -51,6 +51,32 @@ Then you can use it in your js files. Don't forget the css !
 
 ---
 
+## Configuration
+
+```javascript
+
+const map = new Map({
+    basemap: "satellite"
+});
+
+
+var view = new MapView({
+    map: map,
+    container: "app",
+    zoom: 11,
+    center: [-4.5696403, 48.4083868]
+});
+
+const myWidget = new SwitchExtent({
+    view: view, 
+    count: 10 //number of extent in memory
+});
+view.ui.add(myWidget, "top-right")
+
+```
+
+---
+
 ## License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
