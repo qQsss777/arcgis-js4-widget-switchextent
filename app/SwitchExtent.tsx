@@ -19,9 +19,9 @@ import View = require("esri/views/View");
 //--------------------------------------------------------------------
 
 interface SwitchExtentProperties extends __esri.WidgetProperties {
-    view: MapView | SceneView;
+    view: MapView | SceneView,
     count: number
-}
+};
 
 
 //--------------------------------------------------------------------
@@ -36,7 +36,7 @@ const CSS = {
     switchNext: "esri-switchextent-next esri-widget--button",
     buttonDisabled: "esri-button--disabled",
     arrowLeftIcon: "esri-icon-left-triangle-arrow",
-    arrowRightIcon: "esri-icon-right-triangle-arrow",
+    arrowRightIcon: "esri-icon-right-triangle-arrow"
 };
 
 
@@ -99,7 +99,7 @@ class SwitchExtent extends declared(Widget) {
     //-------------------------------------------------------------------
 
     postInitialize(): void {
-        this._handleMoveView()
+        this._handleMoveView();
     }
 
     render() {
@@ -133,9 +133,9 @@ class SwitchExtent extends declared(Widget) {
     //  Private methods
     //
     //-------------------------------------------------------------------
-    private _handleMoveView = () => this.viewModel.handleMoveView()
-    private _onPreviousClick = () => this.viewModel.onPreviousClick()
-    private _onNextClick = () => this.viewModel.onNextClick()
+    private _handleMoveView = () => this.viewModel.handleMoveView();
+    private _onPreviousClick = () => this.viewModel.onPreviousClick();
+    private _onNextClick = () => this.viewModel.onNextClick();
 
 }
 
