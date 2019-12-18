@@ -10,7 +10,7 @@ This widget exists for the ArcGIS API for JavaScript 3.x : https://developers.ar
 
 ### Clone
 
-- Clone this repo to your local machine using `https://github.com/qQsss777/arcgis-js4-widget-savesession.git`
+- Clone this repo to your local machine using `https://github.com/qQsss777/arcgis-js4-widget-switchextent.git`
 
 ### Setup
 
